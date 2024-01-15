@@ -1,1 +1,8 @@
-# hardlink：基于 PySide6 的文件硬链接 GUI
+# hardlink：PySide6-based hard-link GUI for files
+
+## require  
+
+||localversion|
+|:---:|:---:|
+|Python|3.9.2|
+|PySide6|6.6.1|
