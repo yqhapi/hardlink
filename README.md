@@ -11,11 +11,11 @@
 > ### directory info
 |dir|file|
 |:---:|:---:|
-|source_dir|![source_dir](img\source_dir.png)|
-|target_dir|![target_dir](img\target_dir.png)|
+|source_dir|![source_dir](https://github.com/yqhapi/hardlink/blob/main/img/source_dir.png)|
+|target_dir|![target_dir](https://github.com/yqhapi/hardlink/blob/main/img/target_dir.png)|
 
 > ### run
-![gui](img\gui.png)
+![gui](https://github.com/yqhapi/hardlink/blob/main/img/gui.png)
 
 > ### result
-![result](img\result.png)
+![result](https://github.com/yqhapi/hardlink/blob/main/img/result.png)
