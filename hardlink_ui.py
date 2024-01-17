@@ -9,23 +9,44 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize)
+from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (QHBoxLayout, QLineEdit, QPlainTextEdit,
-    QProgressBar, QPushButton, QVBoxLayout,)
+    QProgressBar, QPushButton, QRadioButton, QVBoxLayout)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.resize(400, 400)
-        self.verticalLayout_4 = QVBoxLayout(Form)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_3 = QVBoxLayout()
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2 = QVBoxLayout(Form)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.horizontalLayout_4 = QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(100, -1, -1, -1)
+        self.select_file_button = QRadioButton(Form)
+        self.select_file_button.setObjectName(u"select_file_button")
+        font = QFont()
+        font.setPointSize(12)
+        self.select_file_button.setFont(font)
+        self.select_file_button.setChecked(False)
+        self.select_file_button.setAutoRepeat(False)
+
+        self.horizontalLayout_4.addWidget(self.select_file_button)
+
+        self.select_dir_button = QRadioButton(Form)
+        self.select_dir_button.setObjectName(u"select_dir_button")
+        self.select_dir_button.setEnabled(True)
+        self.select_dir_button.setFont(font)
+        self.select_dir_button.setTabletTracking(False)
+        self.select_dir_button.setChecked(True)
+
+        self.horizontalLayout_4.addWidget(self.select_dir_button)
+
+
+        self.verticalLayout_2.addLayout(self.horizontalLayout_4)
+
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, -1, -1, -1)
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.select_source_dir = QPushButton(Form)
@@ -82,17 +103,11 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
 
-
-        self.verticalLayout_3.addLayout(self.verticalLayout_2)
-
         self.progress_info_text = QPlainTextEdit(Form)
         self.progress_info_text.setObjectName(u"progress_info_text")
         self.progress_info_text.setReadOnly(True)
 
-        self.verticalLayout_3.addWidget(self.progress_info_text)
-
-
-        self.verticalLayout_4.addLayout(self.verticalLayout_3)
+        self.verticalLayout_2.addWidget(self.progress_info_text)
 
 
         self.retranslateUi(Form)
@@ -102,6 +117,8 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"hardlink", None))
+        self.select_file_button.setText(QCoreApplication.translate("Form", u"\u5355\u6587\u4ef6", None))
+        self.select_dir_button.setText(QCoreApplication.translate("Form", u"\u76ee\u5f55", None))
         self.select_source_dir.setText(QCoreApplication.translate("Form", u"\u9009\u62e9\u6e90\u76ee\u5f55", None))
         self.select_target_dir.setText(QCoreApplication.translate("Form", u"\u9009\u62e9\u76ee\u6807\u76ee\u5f55", None))
         self.excute.setText(QCoreApplication.translate("Form", u"\u6267\u884c", None))

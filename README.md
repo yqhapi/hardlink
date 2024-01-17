@@ -1,4 +1,4 @@
-# hardlink：PySide6-based hard-link GUI for files
+# hardlink：PySide6-based hard-link GUI for files and file
 
 ## require  
 
