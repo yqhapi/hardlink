@@ -15,7 +15,7 @@
 |target_dir|![target_dir](https://github.com/yqhapi/hardlink/blob/main/img/target_dir.PNG)|
 
 > ### run
-![gui](https://github.com/yqhapi/hardlink/blob/main/img/gui.png)
+![gui](https://github.com/yqhapi/hardlink/blob/main/img/newgui.PNG)
 
 > ### result
 ![result](https://github.com/yqhapi/hardlink/blob/main/img/result.PNG)
